@@ -16,11 +16,12 @@ export class SignPdf {
     sign(
         pdfBuffer,
         p12Buffer,
+        passphrase,
         additionalOptions = {},
     ) {
         const options = {
             asn1StrictParsing: false,
-            passphrase: '',
+            passphrase: passphrase,
             ...additionalOptions,
         };
 

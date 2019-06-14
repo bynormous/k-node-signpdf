@@ -30,10 +30,10 @@ class SignPdf {
     this.lastSignature = null;
   }
 
-  sign(pdfBuffer, p12Buffer, additionalOptions = {}) {
+  sign(pdfBuffer, p12Buffer, passphase, additionalOptions = {}) {
     const options = {
       asn1StrictParsing: false,
-      passphrase: '',
+      passphrase: passphase,
       ...additionalOptions
     };
 
